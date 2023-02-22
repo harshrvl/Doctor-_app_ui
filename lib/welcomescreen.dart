@@ -1,3 +1,4 @@
+import 'package:appui/login.dart';
 import 'package:appui/medical.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -50,7 +51,7 @@ class welcome extends StatelessWidget {
                       onTap: (){
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context){
-                              return MyApp();
+                              return Login();
                             })
                         );
                       },

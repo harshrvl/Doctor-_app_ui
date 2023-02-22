@@ -1,5 +1,8 @@
+import 'package:appui/login.dart';
 import 'package:appui/welcomescreen.dart';
 import 'package:flutter/material.dart';
+
+import 'doctorprofile.dart';
 
 void main() {
   runApp(const MyApp());
