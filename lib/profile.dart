@@ -34,6 +34,7 @@ class _ProfileState extends State<Profile> {
           elevation: 0,
         ),
         body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Container(
             padding: EdgeInsets.all(16),
             height: size.height,
@@ -245,7 +246,6 @@ class _ProfileState extends State<Profile> {
                               ],
                             ),
                             Icon(Icons.arrow_forward_ios,color: Colors.black54.withOpacity(.5),size: 16,),
-
                           ],
                         ),
                         margin: EdgeInsets.only(top: 30),),

@@ -6,6 +6,7 @@ class DoctorProfile extends StatefulWidget {
 }
 
 class _DoctorProfileState extends State<DoctorProfile> {
+  Color _containerColor = Colors.grey.shade600;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -84,20 +85,32 @@ class _DoctorProfileState extends State<DoctorProfile> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 80,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            color: Colors.grey.shade600,
-                          borderRadius: BorderRadius.circular(10)
-                        ),
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            if(_containerColor==Colors.grey.shade600){
+                              _containerColor=Colors.blue;
+                            }
+                            else{
+                              _containerColor=Colors.grey.shade600;
+                            }
+                          });
+                        },
                         child: Container(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Column(
-                            children: [
-                              Text('9',style: TextStyle(color: Colors.white,fontSize: 25),),
-                              Text('DEC',style: TextStyle(color: Colors.white,fontSize: 25),)
-                            ],
+                          width: 80,
+                          height: 70,
+                          decoration: BoxDecoration(
+                              color: _containerColor,
+                            borderRadius: BorderRadius.circular(10)
+                          ),
+                          child: Container(
+                            padding: EdgeInsets.only(top: 8),
+                            child: Column(
+                              children: [
+                                Text('9',style: TextStyle(color: Colors.white,fontSize: 25),),
+                                Text('DEC',style: TextStyle(color: Colors.white,fontSize: 25),)
+                              ],
+                            ),
                           ),
                         ),
                       ),
